@@ -34,7 +34,7 @@
         - OS_PROJECT
         
     - name: echo command
-      debug: msg="something {{ item.my_idx }}"
+      debug: msg="something {{ item }}.{{ my_idx }}"
       with_items: "{{ fruits }}"
       loop_control:
         index_var: my_idx
