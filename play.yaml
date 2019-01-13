@@ -43,7 +43,7 @@
     - name: debug dict
       debug:
         msg: "fruits numbers loop {{ item.apple }}, {{ item.banana }}"
-      loop: "{{ fruits }}"
+      with_nested: "{{ fruits }}"
         
     - name: debug dict
       debug:
