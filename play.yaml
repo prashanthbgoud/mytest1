@@ -40,7 +40,7 @@
         loop_var: fruits_item
     - name: echo command
       debug: msg="something {{ item }}"
-      with_items: "{{ fruits[v] }}
+      with_items: "{{ fruits[v] }}"
         
     - name: debug
       debug:
