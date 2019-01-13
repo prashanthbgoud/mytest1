@@ -32,6 +32,13 @@
         - OS_USERNAME
         - OS_PASSWORD
         - OS_PROJECT
+        
+    - name: pass version forward
+      include: test_vars.yml v="{{ fruits }}"
+      with_items: "{{ fruits }}"
+      loop_control:
+        loop_var: version_item
+        
     - name: debug
       debug:
         msg: "something {{ os_auth }}"
@@ -42,8 +49,8 @@
         
     - name: debug dict
       debug:
-        msg: "fruits numbers loop {{ item.apple }}, {{ item.banana }}"
-      with_nested: "{{ fruits }}"
+        msg: "fruits numbers loop {{ item }}"
+      with_items: "{{ fruits }}"
         
     - name: debug dict
       debug:
