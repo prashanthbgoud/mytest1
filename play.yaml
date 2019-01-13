@@ -9,6 +9,8 @@
       auth_url: "{{ lookup('env', 'OS_AUTH_URL') }}"
       username: "{{ lookup('env', 'OS_USERNAME') }}"
       password: "{{ lookup('env', 'OS_PASSWORD') }}"
+  vars_files:
+    - test_vars.yml
   tasks:
     - name: Load Tower cloud credential config when it is present
       include_vars: "{{ os_config_file }}"
