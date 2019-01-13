@@ -34,10 +34,13 @@
         - OS_PROJECT
         
     - name: pass version forward
-      include: test_vars.yml v="{{ fruits }}"
+      include: test_vars.yml v="fruits_item"
       with_items: "{{ fruits }}"
       loop_control:
-        loop_var: version_item
+        loop_var: fruits_item
+    - name: echo command
+      debug: msg="something {{ item }}"
+      with_items: "{{ fruits[v] }}
         
     - name: debug
       debug:
