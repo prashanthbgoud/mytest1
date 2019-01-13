@@ -33,14 +33,11 @@
         - OS_PASSWORD
         - OS_PROJECT
         
-    - name: pass version forward
-      include: test_vars.yml v="fruits_item"
+    - name: echo command
+      debug: msg="something {{ item }} with {{ my_idx }}"
       with_items: "{{ fruits }}"
       loop_control:
-        loop_var: fruits_item
-    - name: echo command
-      debug: msg="something {{ item }}"
-      with_items: "{{ fruits[v] }}"
+        index_var: my_idx
         
     - name: debug
       debug:
