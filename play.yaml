@@ -35,6 +35,10 @@
     - name: debug
       debug:
         msg: "something {{ os_auth }}"
+    
+    - name: debug
+      debug:
+        msg: "something {{ fruits }}"
         
     - name: debug dict
       debug:
