@@ -36,6 +36,10 @@
     - name: echo command
       debug: msg="something {{ item }}.apple"
       with_items: "{{ fruits }}"
+   
+    - name: echo with dict
+      debug: msg="something {{ item }}.apple"
+      with_dict: "{{ fruits }}"
         
     - name: debug
       debug:
