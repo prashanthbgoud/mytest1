@@ -35,6 +35,12 @@
     - name: debug
       debug:
         msg: "something {{ os_auth }}"
+        
+    - name: debug dict
+      debug:
+        msg: "fruits numbers loop {{ item.apple }}, {{ item.banana }}"
+      loop: "{{ lookup('dict', fruits) }}"
+      
     - name: Launch compute instances
       os_server:
         auth: "{{ os_auth }}"
