@@ -1,0 +1,16 @@
+---
+
+fruits:
+  first:
+    apple: 4
+    banana: 4
+  second:
+    apple: 8
+    banana: 8
+vegitables:
+  first:
+    tomato: 5
+    potato: 5
+  second:
+    tomato: 9
+    potato: 9
