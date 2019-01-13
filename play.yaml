@@ -33,26 +33,13 @@
         - OS_PASSWORD
         - OS_PROJECT
    
-    - name: echo with dict
-      debug: msg="something {{ item.value.apple }}"
+    - name: echo with fruits
+      debug: msg="number of apples {{ item.value.apple }}, number of banaa {{ item.value.banana }}"
       with_dict: "{{ fruits }}"
         
-    - name: debug
-      debug:
-        msg: "something {{ os_auth }}"
-    
-    - name: debug
-      debug:
-        msg: "something {{ fruits }}"
-        
-    - name: debug dict
-      debug:
-        msg: "fruits numbers loop {{ item }}"
-      with_items: "{{ fruits }}"
-        
-    - name: debug dict
-      debug:
-        msg: "fruits numbers loop {{ item.tomato }}, {{ item.potato }}"
+
+    - name: echo with vegitables
+      debug: msg="number of tomato {{ item.value.tomato }}, number of potato {{ item.value.potato }}"
       with_dict: "{{ vegitables }}"
       
     - name: Launch compute instances
