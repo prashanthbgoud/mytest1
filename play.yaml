@@ -34,7 +34,7 @@
         - OS_PROJECT
         
     - name: echo command
-      debug: msg="something {{ item }}.apple"
+      debug: msg="something {{ item }}['value']['apple']"
       with_items: "{{ fruits }}"
    
     - name: echo with dict
